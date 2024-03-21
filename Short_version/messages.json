@@ -1,0 +1,41 @@
+{
+    "welcome":{
+        "rus":"Привет! 👋 Я помогаю находить дешевые авиабилеты. Со мной очень легко! Просто введи:\n- Откуда ✈️\n- Куда ✈️\n- В какие даты можешь вылететь 📅\nИ я найду самые дешевые билеты на эти дни. Пользуйся мной, я люблю помогать! ❤️",
+        "eng":"Hi there! 👋 I help you find cheap flights. It's super easy with me! Just enter:\n- Departure ✈️\n- Destination ✈️\n- Dates you can fly 📅\nAnd I'll find the cheapest tickets for those days. Use me, I love to help! ❤️"
+    },
+    "choose_departure": {
+        "rus":"Введите город откуда летите (Пример: Бангкок)",
+        "eng":"Enter the city you're flying from (Example: Bangkok)"
+    },
+    "didnt_understand":{
+        "rus":"Я не понял, введите название города еще раз",
+        "eng":"I didn't understand, please enter the city name again"
+    },
+    "didnt_understand2":{
+        "rus":"Не понял, выберете город из меню",
+        "eng":"Didn't understand, choose a city from the menu"
+    },
+    "choose_from_list_departure":{
+        "rus":"Выберите из списка откуда отправляетесь",
+        "eng":"Choose from the list where you are departing from"
+    },
+
+
+
+    "choose_arrive": {
+        "rus":"Введите город куда вы летите (Пример: Рим)",
+        "eng":"Enter the city you're flying to (Example: Rome)"
+    },
+    "choose_from_list_arrive":{
+        "rus":"Выберите из списка куда летите",
+        "eng":"Choose from the list where you are flying"
+    },
+    "choose_departure_dates":{
+        "rus":"Выберите даты в которые хотели бы вылетить(несколько-чтобы найти самый дешевый билет)",
+        "eng":"Choose the dates you want to fly (select multiple to find the cheapest ticket)"
+    }
+
+
+
+
+}

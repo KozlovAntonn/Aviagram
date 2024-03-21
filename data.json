@@ -1,0 +1,658 @@
+[
+    {
+        "id": "98d5fa02-8fc2-498c-b288-151f3a504697",
+        "type": "airport",
+        "code": "LHR",
+        "name": "Хитроу",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "city_code": "LON",
+        "city_name": "Лондон",
+        "state_code": null,
+        "coordinates": {
+            "lon": -0.453566,
+            "lat": 51.469604
+        },
+        "index_strings": [],
+        "weight": 7104,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        }
+    },
+    {
+        "id": "231e1e17-6648-48bb-b315-8a60855917fa",
+        "type": "airport",
+        "code": "LGW",
+        "name": "Гатвик",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "city_code": "LON",
+        "city_name": "Лондон",
+        "state_code": null,
+        "coordinates": {
+            "lon": -0.161863,
+            "lat": 51.156807
+        },
+        "index_strings": [],
+        "weight": 4247,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        }
+    },
+    {
+        "id": "a6ec1def-4995-4a98-8c93-46b42b10fe7e",
+        "type": "city",
+        "code": "LON",
+        "name": "Лондон",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "state_code": null,
+        "coordinates": {
+            "lon": 0.06,
+            "lat": 51.51
+        },
+        "index_strings": [],
+        "weight": 25435,
+        "cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        },
+        "main_airport_name": null
+    },
+    {
+        "id": "fed738cc-8da0-4532-a07b-d105a970d001",
+        "type": "airport",
+        "code": "LTN",
+        "name": "Лутон",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "city_code": "LON",
+        "city_name": "Лондон",
+        "state_code": null,
+        "coordinates": {
+            "lon": -0.376232,
+            "lat": 51.87977
+        },
+        "index_strings": [],
+        "weight": 2090,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        }
+    },
+    {
+        "id": "af3c3294-eb57-4493-846b-81ca44528dc2",
+        "type": "airport",
+        "code": "STN",
+        "name": "Стенстед",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "city_code": "LON",
+        "city_name": "Лондон",
+        "state_code": null,
+        "coordinates": {
+            "lon": 0.262703,
+            "lat": 51.889267
+        },
+        "index_strings": [],
+        "weight": 4288,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        }
+    },
+    {
+        "id": "b580148f-fa28-40eb-ab1c-318956abbb82",
+        "type": "airport",
+        "code": "LCY",
+        "name": "Лондон-Сити",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "city_code": "LON",
+        "city_name": "Лондон",
+        "state_code": null,
+        "coordinates": {
+            "lon": 0.05,
+            "lat": 51.5
+        },
+        "index_strings": [],
+        "weight": 164,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        }
+    },
+    {
+        "id": "0f4212b5-0744-45be-b2c1-cbda2e1c28fe",
+        "type": "airport",
+        "code": "SEN",
+        "name": "Соутенд Муниципал",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "city_code": "LON",
+        "city_name": "Лондон",
+        "state_code": null,
+        "coordinates": {
+            "lon": 0.701389,
+            "lat": 51.572777
+        },
+        "index_strings": [],
+        "weight": 43,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        }
+    },
+    {
+        "id": "f5f46321-5be0-46b0-841c-9508a15a6d79",
+        "type": "city",
+        "code": "LDB",
+        "name": "Лондрина",
+        "country_code": "BR",
+        "country_name": "Бразилия",
+        "state_code": "PR",
+        "coordinates": {
+            "lon": -51.137714,
+            "lat": -23.328457
+        },
+        "index_strings": [],
+        "weight": 16,
+        "cases": {
+            "vi": "в Лондрину",
+            "tv": "Лондриной",
+            "su": "Лондрина",
+            "ro": "Лондрины",
+            "pr": "Лондрине",
+            "da": "Лондрине"
+        },
+        "country_cases": {
+            "vi": "в Бразилию",
+            "tv": "Бразилией",
+            "su": "Бразилия",
+            "ro": "Бразилии",
+            "pr": "Бразилии",
+            "da": "Бразилии"
+        },
+        "main_airport_name": "Лондрина"
+    },
+    {
+        "id": "b8d86186-fbc0-46cb-8d28-4a9a4327b7b5",
+        "type": "city",
+        "code": "YXU",
+        "name": "Лондон",
+        "country_code": "CA",
+        "country_name": "Канада",
+        "state_code": "ON",
+        "coordinates": {
+            "lon": -81.251,
+            "lat": 42.987
+        },
+        "index_strings": [],
+        "weight": 25,
+        "cases": {
+            "vi": "в Лондон",
+            "tv": "Лондоном",
+            "su": "Лондон",
+            "ro": "Лондона",
+            "pr": "Лондоне",
+            "da": "Лондону"
+        },
+        "country_cases": {
+            "vi": "в Канаду",
+            "tv": "Канадой",
+            "su": "Канада",
+            "ro": "Канады",
+            "pr": "Канаде",
+            "da": "Канаде"
+        },
+        "main_airport_name": "Корбин"
+    },
+    {
+        "id": "ed68cbb7-5102-415d-a0da-7f22a0c3850a",
+        "type": "city",
+        "code": "LDZ",
+        "name": "Лондолози",
+        "country_code": "ZA",
+        "country_name": "ЮАР",
+        "state_code": null,
+        "coordinates": {
+            "lon": 31.5,
+            "lat": -24.8
+        },
+        "index_strings": [],
+        "weight": 1,
+        "cases": {
+            "vi": "в Лондолози",
+            "tv": "Лондолози",
+            "su": "Лондолози",
+            "ro": "Лондолози",
+            "pr": "Лондолози",
+            "da": "Лондолози"
+        },
+        "country_cases": {
+            "vi": "в ЮАР",
+            "tv": "ЮАР",
+            "su": "ЮАР",
+            "ro": "ЮАР",
+            "pr": "ЮАР",
+            "da": "ЮАР"
+        },
+        "main_airport_name": "Лондолози"
+    },
+    {
+        "id": "cbdf0797-626e-4895-af31-6ff53b299a65",
+        "type": "city",
+        "code": "ELS",
+        "name": "Ист-Лондон",
+        "country_code": "ZA",
+        "country_name": "ЮАР",
+        "state_code": null,
+        "coordinates": {
+            "lon": 27.82892,
+            "lat": -33.038437
+        },
+        "index_strings": [],
+        "weight": 138,
+        "cases": {
+            "vi": "в Ист-Лондон",
+            "tv": "Ист-Лондоном",
+            "su": "Ист-Лондон",
+            "ro": "Ист-Лондона",
+            "pr": "Ист-Лондоне",
+            "da": "Ист-Лондону"
+        },
+        "country_cases": {
+            "vi": "в ЮАР",
+            "tv": "ЮАР",
+            "su": "ЮАР",
+            "ro": "ЮАР",
+            "pr": "ЮАР",
+            "da": "ЮАР"
+        },
+        "main_airport_name": "Ист-Лондон"
+    },
+    {
+        "id": "103df135-cda4-434d-9e6e-a6a75cba40ac",
+        "type": "city",
+        "code": "OXF",
+        "name": "Оксфорд",
+        "country_code": "GB",
+        "country_name": "Великобритания",
+        "state_code": null,
+        "coordinates": {
+            "lon": -1.25,
+            "lat": 51.766666
+        },
+        "index_strings": [],
+        "weight": 2,
+        "cases": {
+            "vi": "в Оксфорд",
+            "tv": "Оксфордом",
+            "su": "Оксфорд",
+            "ro": "Оксфорда",
+            "pr": "Оксфорде",
+            "da": "Оксфорду"
+        },
+        "country_cases": {
+            "vi": "в Великобританию",
+            "tv": "Великобританией",
+            "su": "Великобритания",
+            "ro": "Великобритании",
+            "pr": "Великобритании",
+            "da": "Великобритании"
+        },
+        "main_airport_name": "Лондон Оксфорд"
+    },
+    {
+        "id": "419eff52-2f2a-43c6-a87b-37a48c421034",
+        "type": "city",
+        "code": "HKG",
+        "name": "Гонконг",
+        "country_code": "HK",
+        "country_name": "Гонконг",
+        "state_code": null,
+        "coordinates": {
+            "lon": 114.2033843,
+            "lat": 22.2478599
+        },
+        "index_strings": [],
+        "weight": 13431,
+        "cases": {
+            "vi": "в Гонконг",
+            "tv": "Гонконгом",
+            "su": "Гонконг",
+            "ro": "Гонконга",
+            "pr": "Гонконге",
+            "da": "Гонконгу"
+        },
+        "country_cases": {
+            "vi": "в Гонконг",
+            "tv": "Гонконгом",
+            "su": "Гонконг",
+            "ro": "Гонконга",
+            "pr": "Гонконге",
+            "da": "Гонконгу"
+        },
+        "main_airport_name": "Гонконг "
+    },
+    {
+        "id": "f23c5f90-fa8c-4bef-8f69-9a18c6f60af1",
+        "type": "airport",
+        "code": "DMK",
+        "name": "Дон-Муанг",
+        "country_code": "TH",
+        "country_name": "Таиланд",
+        "city_code": "BKK",
+        "city_name": "Бангкок",
+        "state_code": null,
+        "coordinates": {
+            "lon": 100.60667,
+            "lat": 13.9125
+        },
+        "index_strings": [],
+        "weight": 13969,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Бангкок",
+            "tv": "Бангкоком",
+            "su": "Бангкок",
+            "ro": "Бангкока",
+            "pr": "Бангкоке",
+            "da": "Бангкоку"
+        },
+        "country_cases": {
+            "vi": "в Таиланд",
+            "tv": "Таиландом",
+            "su": "Таиланд",
+            "ro": "Таиланда",
+            "pr": "Таиланде",
+            "da": "Таиланду"
+        }
+    },
+    {
+        "id": "303ca1dd-ebe0-473a-a8cc-c57cd59a5eda",
+        "type": "city",
+        "code": "LYS",
+        "name": "Лион",
+        "country_code": "FR",
+        "country_name": "Франция",
+        "state_code": null,
+        "coordinates": {
+            "lon": 4.835659,
+            "lat": 45.764043
+        },
+        "index_strings": [],
+        "weight": 3465,
+        "cases": {
+            "vi": "в Лион",
+            "tv": "Лионом",
+            "su": "Лион",
+            "ro": "Лиона",
+            "pr": "Лионе",
+            "da": "Лиону"
+        },
+        "country_cases": {
+            "vi": "во Францию",
+            "tv": "Францией",
+            "su": "Франция",
+            "ro": "Франции",
+            "pr": "Франции",
+            "da": "Франции"
+        },
+        "main_airport_name": null
+    },
+    {
+        "id": "1d0fc1b6-9754-4371-913a-50e0dbf4b80d",
+        "type": "city",
+        "code": "BKK",
+        "name": "Бангкок",
+        "country_code": "TH",
+        "country_name": "Таиланд",
+        "state_code": null,
+        "coordinates": {
+            "lon": 100.4762319,
+            "lat": 13.7234186
+        },
+        "index_strings": [],
+        "weight": 128262,
+        "cases": {
+            "vi": "в Бангкок",
+            "tv": "Бангкоком",
+            "su": "Бангкок",
+            "ro": "Бангкока",
+            "pr": "Бангкоке",
+            "da": "Бангкоку"
+        },
+        "country_cases": {
+            "vi": "в Таиланд",
+            "tv": "Таиландом",
+            "su": "Таиланд",
+            "ro": "Таиланда",
+            "pr": "Таиланде",
+            "da": "Таиланду"
+        },
+        "main_airport_name": null
+    },
+    {
+        "id": "1bbcbe0c-3661-49c5-8961-e00b603f40a2",
+        "type": "city",
+        "code": "SGN",
+        "name": "Хошимин",
+        "country_code": "VN",
+        "country_name": "Вьетнам",
+        "state_code": null,
+        "coordinates": {
+            "lon": 106.662476,
+            "lat": 10.813045
+        },
+        "index_strings": [],
+        "weight": 23939,
+        "cases": {
+            "vi": "в Хошимин",
+            "tv": "Хошимином",
+            "su": "Хошимин",
+            "ro": "Хошимина",
+            "pr": "Хошимине",
+            "da": "Хошимину"
+        },
+        "country_cases": {
+            "vi": "в Вьетнам",
+            "tv": "Вьетнамом",
+            "su": "Вьетнам",
+            "ro": "Вьетнама",
+            "pr": "Вьетнаме",
+            "da": "Вьетнаму"
+        },
+        "main_airport_name": "Хошимин"
+    },
+    {
+        "id": "fdae2012-87ce-4d79-9b0e-818938208a45",
+        "type": "city",
+        "code": "HKT",
+        "name": "Пхукет",
+        "country_code": "TH",
+        "country_name": "Таиланд",
+        "state_code": null,
+        "coordinates": {
+            "lon": 98.306435,
+            "lat": 8.107619
+        },
+        "index_strings": [],
+        "weight": 150157,
+        "cases": {
+            "vi": "на Пхукет",
+            "tv": "Пхукетом",
+            "su": "Пхукет",
+            "ro": "Пхукета",
+            "pr": "Пхукете",
+            "da": "Пхукету"
+        },
+        "country_cases": {
+            "vi": "в Таиланд",
+            "tv": "Таиландом",
+            "su": "Таиланд",
+            "ro": "Таиланда",
+            "pr": "Таиланде",
+            "da": "Таиланду"
+        },
+        "main_airport_name": "Пхукет"
+    },
+    {
+        "id": "476d8b36-165c-47f0-8f19-ef77d53cf1cc",
+        "type": "city",
+        "code": "TLV",
+        "name": "Тель-Авив",
+        "country_code": "IL",
+        "country_name": "Израиль",
+        "state_code": null,
+        "coordinates": {
+            "lon": 34.870743,
+            "lat": 32.000454
+        },
+        "index_strings": [],
+        "weight": 34463,
+        "cases": {
+            "vi": "в Тель-Авив",
+            "tv": "Тель-Авивом",
+            "su": "Тель-Авив",
+            "ro": "Тель-Авива",
+            "pr": "Тель-Авиве",
+            "da": "Тель-Авиву"
+        },
+        "country_cases": {
+            "vi": "в Израиль",
+            "tv": "Израилем",
+            "su": "Израиль",
+            "ro": "Израиля",
+            "pr": "Израиле",
+            "da": "Израилю"
+        },
+        "main_airport_name": "Бен Гурион"
+    },
+    {
+        "id": "1a85e889-a0c9-4591-8402-dc9fa615e13a",
+        "type": "airport",
+        "code": "LYS",
+        "name": "Сент-Экзюпери",
+        "country_code": "FR",
+        "country_name": "Франция",
+        "city_code": "LYS",
+        "city_name": "Лион",
+        "state_code": null,
+        "coordinates": {
+            "lon": 5.080334,
+            "lat": 45.721424
+        },
+        "index_strings": [],
+        "weight": 2327,
+        "cases": null,
+        "city_cases": {
+            "vi": "в Лион",
+            "tv": "Лионом",
+            "su": "Лион",
+            "ro": "Лиона",
+            "pr": "Лионе",
+            "da": "Лиону"
+        },
+        "country_cases": {
+            "vi": "во Францию",
+            "tv": "Францией",
+            "su": "Франция",
+            "ro": "Франции",
+            "pr": "Франции",
+            "da": "Франции"
+        }
+    }
+]
