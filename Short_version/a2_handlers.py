@@ -11,7 +11,6 @@ from a4_utilities import make_date_readable, key_function
 from keyboards.inline_calendar import generate_calendar_keyboard
 from keyboards.inline import kb_flight_class, people_amount_keyboard, kb_ask_main_currency, kb_ask_main_language
 from a5_states import Form
-import a6_messages
 from keyboards.reply import kb_offer_cities, kb_menu
 from api_Avia.aviasales_getdata import find_all_variants_tickets
 from database.db_functions import check_if_user_exist, push_user_info, update_user_info, push_quick_search_parameters, get_user_info, get_user_language
