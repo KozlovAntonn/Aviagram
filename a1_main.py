@@ -10,7 +10,6 @@ from a2_handlers import router
 
 
 
-
 async def on_startup(bot: Bot) -> None:
     # If you have a self-signed SSL certificate, then you will need to send a public
     # certificate to Telegram
@@ -53,9 +52,15 @@ def main() -> None:
     setup_application(app, dp, bot=bot)
 
     # And finally start webserver
+    print("-------------------")
+    print("web server host: ", WEB_SERVER_HOST)
+    print("web server port: ", WEB_SERVER_PORT)
     web.run_app(app, host=WEB_SERVER_HOST, port=WEB_SERVER_PORT)
 
 
 if __name__ == "__main__":
+    print('LETS GOOOO')
+    print('LETS GOOOO')
+    print('LETS GOOOO')
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     main()

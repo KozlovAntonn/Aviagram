@@ -43,6 +43,10 @@ async def command_start_handler(message: Message, state: FSMContext) -> None:
 @router.message(Command("settings")) 
 @router.message(Form.settings_language)
 async def ask_language(message: Message, state: FSMContext) -> None:
+    user_id = message.from_user.id
+    if not await check_if_user_exist(user_id):
+        await message.answer("Сначала зарегистрируйтесь командой /start")
+        return
     await message.answer("Выберите язык\nChoose language", reply_markup=kb_ask_main_language())
 
 @router.callback_query(lambda query: "lang/" in query.data) 
@@ -121,6 +125,10 @@ async def selected_currency(query: CallbackQuery, state: FSMContext):
 @router.message(Command("search")) # 1) "Введите город откуда летите (Пример: Бангкок)"
 async def ask_from_where(message: Message, state: FSMContext) -> None:
     user_id = message.from_user.id
+    if not await check_if_user_exist(user_id):
+        await message.answer("Сначала зарегистрируйтесь командой /start")
+        return
+
     lang = await get_user_language(user_id)
     text = await all_messages()
     text = text['choose_departure'][lang]
