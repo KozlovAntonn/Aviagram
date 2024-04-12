@@ -1,26 +1,26 @@
-from database.db_config import USER, PASSWORD, DBNAME, HOST
+from database.db_config import USER, PASSWORD, DBNAME, HOST, PORT
 # from db_config import USER, PASSWORD, DBNAME, HOST
-from datetime import datetime
+from datetime import datetime, timezone
 import asyncpg
 
 async def check_if_user_exist(user_id):
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
-    # try:
-    query = 'SELECT COUNT(*) FROM "Users" WHERE user_id = $1'
-    result = await conn.fetchval(query, user_id)
+    try:
+        query = 'SELECT COUNT(*) FROM "Users" WHERE user_id = $1'
+        result = await conn.fetchval(query, user_id)
 
-    return result > 0
+        return result > 0
 
-    # finally:
-    await conn.close()
+    finally:
+        await conn.close()
 
 
 async def push_user_info(user_id, username, user_firstname, user_lastname, language, currency):
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
-        registered_at = datetime.utcnow()
+        registered_at = datetime.now(timezone.utc)
         query = '''
             INSERT INTO "Users" (user_id, username, first_name, second_name, language_code, currency_code, registered_at)
             VALUES ($1, $2, $3, $4, $5, $6, $7)
@@ -31,7 +31,7 @@ async def push_user_info(user_id, username, user_firstname, user_lastname, langu
         await conn.close()
 
 async def get_user_info(user_id):
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
         query = '''
@@ -46,7 +46,7 @@ async def get_user_info(user_id):
         await conn.close()
 
 async def get_user_language(user_id):
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
         query = '''
@@ -62,7 +62,7 @@ async def get_user_language(user_id):
 
 
 async def update_user_info(user_id, username, user_firstname, user_lastname, language, currency, interaction_time=None):
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
         query = '''
@@ -82,7 +82,7 @@ async def update_user_info(user_id, username, user_firstname, user_lastname, lan
 
 
 async def list_tables():
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
         query = '''
@@ -105,10 +105,10 @@ async def list_tables():
 
 
 async def push_quick_search_parameters(user_id, departure_code, arrive_code, departure_dates, return_dates=None, people_amount=[1,0,0], flight_class="econom"):
-    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST)
+    conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
-        created_at = datetime.utcnow()
+        created_at = datetime.now(timezone.utc)
         query = '''
             INSERT INTO "Quick_search_parameters" (user_id, departure_code, arrive_code, departure_dates, return_dates, people_amount, flight_class, created_at)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
