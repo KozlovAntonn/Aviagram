@@ -1,5 +1,6 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9
+# FROM python:3.9
+FROM --platform=linux/amd64 python:3.9
 
 # Set the working directory in the container
 WORKDIR /app
@@ -15,3 +16,5 @@ COPY . .
 
 # Define the command to run your application
 CMD ["python", "a1_main.py"]
+
+EXPOSE 5000
