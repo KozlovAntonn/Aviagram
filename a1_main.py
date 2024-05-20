@@ -7,6 +7,7 @@ from aiogram.enums import ParseMode
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from a0_config import TOKEN, BASE_WEBHOOK_URL, WEBHOOK_PATH, WEBHOOK_SECRET, WEB_SERVER_HOST, WEB_SERVER_PORT
 from a2_handlers import router
+from a3_error_handlers import router as error_router
 
 
 
@@ -16,8 +17,6 @@ async def on_startup(bot: Bot) -> None:
     await bot.set_webhook(f"{BASE_WEBHOOK_URL}{WEBHOOK_PATH}", secret_token=WEBHOOK_SECRET)
 
 async def on_shutdown(bot: Bot) -> None:
-    # If you have a self-signed SSL certificate, then you will need to send a public
-    # certificate to Telegram
     print("bot has been stopped")
 
 
@@ -26,6 +25,7 @@ def main() -> None:
     dp = Dispatcher()
     # ... and all other routers should be attached to Dispatcher
     dp.include_router(router)
+    dp.include_router(error_router)
 
     # Register startup hook to initialize webhook
     dp.startup.register(on_startup)

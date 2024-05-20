@@ -58,3 +58,13 @@ def kb_ask_main_language():
     return markup
 
 
+def kb_inline_menu(language):
+    builder = InlineKeyboardBuilder()
+    btn_text = "🔎 Искать билеты ✈️" if language == "rus" else "🔎 Search tickets ✈️"
+    builder.button(text=btn_text, callback_data=f"/search_btn")
+    # builder.button(text='/settings - Настройки ⚙️', callback_data=f"/settings_btn")
+    # builder.adjust(2)
+    markup = builder.as_markup()
+    return markup
+
+

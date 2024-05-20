@@ -11,6 +11,14 @@ COPY requirements.txt .
 # Install the dependencies
 RUN pip install -r requirements.txt
 
+# Install locales
+RUN apt-get clean && apt-get update && apt-get install -y locales
+RUN locale-gen ru_RU.UTF-8
+
+ENV LANG ru_RU.UTF-8  
+ENV LANGUAGE ru_RU:ru  
+ENV LC_ALL ru_RU.UTF-8
+
 # Copy the rest of the application code into the container at /app
 COPY . .
 

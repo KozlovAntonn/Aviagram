@@ -34,4 +34,5 @@ async def autocomplete_cities(lang="ru", text=None,):
 
 def extract_code_from_brackets(text):
     # Используем регулярное выражение для поиска текста в скобках
-    return re.search(r'\((.*?)\)', text).group(1)
+    match = re.search(r'\b([A-Z]{3})\b', text)
+    return match.group(1) if match else None

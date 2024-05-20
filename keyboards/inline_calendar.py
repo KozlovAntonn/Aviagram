@@ -3,7 +3,7 @@ import calendar
 from datetime import datetime
 from babel.dates import format_date
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-
+import pytz
 
 # def month_days_in_list(show_month=None):
 #     now = datetime.now().date()
@@ -60,8 +60,24 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
 
-def month_days_in_list(show_month=None):
-    now = datetime.now().date()
+def month_days_in_list(language, timezone_str, show_month=None):
+    month_names = {
+        1: {'rus':'Январь', 'eng':'January'},
+        2: {'rus':'Февраль', 'eng':'February'},
+        3: {'rus':'Март', 'eng':'March'},
+        4: {'rus':'Апрель', 'eng':'April'},
+        5: {'rus':'Май', 'eng':'May'},
+        6: {'rus':'Июнь', 'eng':'June'},
+        7: {'rus':'Июль', 'eng':'July'},
+        8: {'rus':'Август', 'eng':'August'},
+        9: {'rus':'Сентябрь', 'eng':'September'},
+        10: {'rus':'Октябрь', 'eng':'October'},
+        11: {'rus':'Ноябрь', 'eng':'November'},
+        12: {'rus':'Декабрь', 'eng':'December'}
+    }
+
+    timezone = pytz.timezone(timezone_str)
+    now = datetime.now(timezone).date()
     if show_month:
         input_date = datetime.strptime(show_month, "%Y-%m").date()
         now = input_date if input_date >= now else now # Use current month if input_date is in the future
@@ -71,7 +87,7 @@ def month_days_in_list(show_month=None):
 
     next_month = now + relativedelta(months=+1)
     previous_month = now - relativedelta(months=1)
-    month_name = calendar.month_name[month]
+    month_name = month_names[now.month][language]
 
     first_day_of_month = datetime(year, month, 1)
     starting_weekday = first_day_of_month.weekday()  # 0 for Monday, 6 for Sunday
@@ -90,20 +106,30 @@ def month_days_in_list(show_month=None):
 
 
     # Fill remaining days with days of next month
-    remaining_days = 35 - len(days_list)
+    
+    if len(days_list) > 35 : 
+        remaining_days = 42 - len(days_list)
+        kb_long = True
+    else:
+        remaining_days = 35 - len(days_list)
+        kb_long = False
     for day in range(1, remaining_days + 1):
         days_list.append("0")
+
+    # remaining_days = 35 - len(days_list)
+    # for day in range(1, remaining_days + 1):
+    #     days_list.append("0")
 
     # Reshape the list into a matrix
     days_matrix = [days_list[i:i+7] for i in range(0, len(days_list), 7)]
 
-    return days_matrix, previous_month.strftime("%Y-%m"), next_month.strftime("%Y-%m"), month_name
+    return days_matrix, previous_month.strftime("%Y-%m"), next_month.strftime("%Y-%m"), month_name, kb_long
 
 
 
-def generate_calendar_keyboard(show_month=None, selected_dates=[], fly_back=False):
-    days_and_month = month_days_in_list(show_month)
-    days_matrix, previous_month, next_month, month_name = days_and_month
+def generate_calendar_keyboard(language, timezone_str, show_month=None, selected_dates=[], fly_back=False):
+    days_and_month = month_days_in_list(language, timezone_str, show_month)
+    days_matrix, previous_month, next_month, month_name, kb_long = days_and_month
     print(days_matrix)
 
     is_back = "/back" if fly_back else ""
@@ -116,7 +142,7 @@ def generate_calendar_keyboard(show_month=None, selected_dates=[], fly_back=Fals
     builder.button(text=">>", callback_data=f"{next_month}/month{is_back}")
 
     # row weekdays names 
-    weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] if language == "eng" else ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
     for weekday in weekdays:
         builder.button(text=weekday, callback_data="ignore")
 
@@ -140,8 +166,12 @@ def generate_calendar_keyboard(show_month=None, selected_dates=[], fly_back=Fals
     # for _ in range(remaining_buttons_count):
     #     builder.button(text=" ", callback_data="ignore")
 
-    builder.button(text="Готово", callback_data=f"done_choosing_day{is_back}")
-    builder.adjust(3,7,7,7,7,7,7,1)  # Adjusts based on number of columns you want
+    ready_button = "Done" if language == "eng" else "Готово"
+    builder.button(text=ready_button, callback_data=f"done_choosing_day{is_back}")
+    if kb_long:
+        builder.adjust(3,7,7,7,7,7,7,7,1)  # Adjusts based on number of columns you want
+    else:
+        builder.adjust(3,7,7,7,7,7,7,1)  # Adjusts based on number of columns you want
     markup = builder.as_markup()
 
     return markup

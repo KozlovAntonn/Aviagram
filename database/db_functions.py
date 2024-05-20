@@ -1,13 +1,13 @@
 from database.db_config import USER, PASSWORD, DBNAME, HOST, PORT
-# from db_config import USER, PASSWORD, DBNAME, HOST
 from datetime import datetime, timezone
 import asyncpg
+import logging
 
 async def check_if_user_exist(user_id):
     conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
-        query = 'SELECT COUNT(*) FROM "Users" WHERE user_id = $1'
+        query = 'SELECT COUNT(*) FROM users WHERE user_id = $1'
         result = await conn.fetchval(query, user_id)
 
         return result > 0
@@ -20,9 +20,9 @@ async def push_user_info(user_id, username, user_firstname, user_lastname, langu
     conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
-        registered_at = datetime.now(timezone.utc)
+        registered_at = datetime.utcnow()
         query = '''
-            INSERT INTO "Users" (user_id, username, first_name, second_name, language_code, currency_code, registered_at)
+            INSERT INTO users (user_id, username, first_name, second_name, language_code, currency_code, registered_at)
             VALUES ($1, $2, $3, $4, $5, $6, $7)
         '''
         await conn.execute(query, user_id, username, user_firstname, user_lastname, language, currency, registered_at)
@@ -30,13 +30,14 @@ async def push_user_info(user_id, username, user_firstname, user_lastname, langu
     finally:
         await conn.close()
 
+
 async def get_user_info(user_id):
     conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
         query = '''
             SELECT user_id, username, first_name, second_name, language_code, currency_code, registered_at
-            FROM "Users"
+            FROM users
             WHERE user_id = $1
         '''
         user_info = await conn.fetchrow(query, user_id)
@@ -50,7 +51,7 @@ async def get_user_language(user_id):
 
     try:
         query = '''
-            SELECT language_code FROM "Users" WHERE user_id = $1
+            SELECT language_code FROM users WHERE user_id = $1
         '''
         user_info = await conn.fetchrow(query, user_id)
         return user_info['language_code']  # Extracting the value directly
@@ -66,7 +67,7 @@ async def update_user_info(user_id, username, user_firstname, user_lastname, lan
 
     try:
         query = '''
-            UPDATE "Users"
+            UPDATE users
             SET
                 username = $2,
                 first_name = $3,
@@ -108,9 +109,9 @@ async def push_quick_search_parameters(user_id, departure_code, arrive_code, dep
     conn = await asyncpg.connect(user=USER, password=PASSWORD, database=DBNAME, host=HOST, port=PORT)
 
     try:
-        created_at = datetime.now(timezone.utc)
+        created_at = datetime.utcnow()
         query = '''
-            INSERT INTO "Quick_search_parameters" (user_id, departure_code, arrive_code, departure_dates, return_dates, people_amount, flight_class, created_at)
+            INSERT INTO quick_search_parameters (user_id, departure_code, arrive_code, departure_dates, return_dates, people_amount, flight_class, created_at)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
         '''
         await conn.execute(query, user_id, departure_code, arrive_code, departure_dates, return_dates, people_amount, flight_class, created_at)
